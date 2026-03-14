@@ -245,7 +245,7 @@ async def back_to_main(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
 
 # --- FAQ flow ---
 
-async def show_faqs(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+as def show_faqs(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Show the FAQ list for a committee."""
     query = update.callback_query
     await query.answer()
@@ -343,7 +343,7 @@ async def ask_question_prompt(
     return AWAITING_QUESTION
 
 
-async def receive_question(
+async  def receive_question(
     update: Update, context: ContextTypes.DEFAULT_TYPE
 ) -> int:
     """Receive the user's question and forward it to admins anonymously."""
