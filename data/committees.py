@@ -10,317 +10,481 @@ Each committee entry contains:
 - website:     Website URL (empty string if not available)
 - directors:   List of {name, tele_handle} dicts for current directors/ExCo leads
 - faqs:        List of {question, answer} dicts of frequently asked questions
+
+Source: CAPT 14th CSC Mass Rec Catalogue AY25/26
 """
 
 COMMITTEES: list[dict] = [
     {
-        "name": "Student Executive Committee (SExC)",
-        "short_name": "sexc",
+        "name": "CSC Secretariat",
+        "short_name": "csc_secretariat",
         "overview": (
-            "The Student Executive Committee (SExC) is the main student governance body "
-            "of CAPT. It oversees all other sub-committees and represents the student "
-            "body in liaising with college management. SExC organises college-wide events "
-            "and is the go-to committee for general administrative matters."
+            "The CSC Secretariat is a subsidiary of the Standing Committee and "
+            "is responsible for administrative and finance matters across CSC "
+            "committees. It maintains high standards in PDPA and treasury "
+            "management while streamlining workflows to support the student body."
         ),
-        "ig_handle": "@capt.sexc",
-        "tele_handle": "@captSExC",
-        "website": "https://capt.nus.edu.sg",
-        "directors": [
-            {"name": "President", "tele_handle": "@capt_president"},
-            {"name": "Vice-President (Internal)", "tele_handle": "@capt_vpi"},
-            {"name": "Vice-President (External)", "tele_handle": "@capt_vpe"},
-        ],
-        "faqs": [
-            {
-                "question": "How do I join SExC?",
-                "answer": (
-                    "Recruitment for SExC takes place at the start of each academic year. "
-                    "Look out for open recruitment posts on the CAPT SExC Instagram page "
-                    "or Telegram channel. You can also reach out directly to any of the "
-                    "directors listed above."
-                ),
-            },
-            {
-                "question": "What events does SExC organise?",
-                "answer": (
-                    "SExC organises major college-wide events such as CAPT Day, Freshmen "
-                    "Orientation Camp (FOC), Inter-College Games (ICG) and town halls. "
-                    "It also coordinates activities with other Residential Colleges."
-                ),
-            },
-            {
-                "question": "How can I raise a feedback or suggestion?",
-                "answer": (
-                    "You can approach any SExC member directly or submit feedback "
-                    "through our anonymous feedback form linked in our Instagram bio. "
-                    "You can also use the 'Ask a Question' feature in this bot to send "
-                    "an anonymous message to SExC."
-                ),
-            },
-        ],
-    },
-    {
-        "name": "Academic Committee (AcaCom)",
-        "short_name": "acacom",
-        "overview": (
-            "AcaCom promotes academic excellence and a culture of learning within CAPT. "
-            "It organises study sessions, peer tutoring, academic workshops, and connects "
-            "residents with academic resources. AcaCom also coordinates with NUS faculty "
-            "for college-level academic talks and seminars."
-        ),
-        "ig_handle": "@capt.acacom",
-        "tele_handle": "@captAcaCom",
+        "ig_handle": "@capt_csc_secretariat",
+        "tele_handle": "@capt_csc_secretariat",
         "website": "",
-        "directors": [
-            {"name": "AcaCom Director", "tele_handle": "@capt_acadir"},
-        ],
-        "faqs": [
-            {
-                "question": "Does AcaCom offer tutoring or study groups?",
-                "answer": (
-                    "Yes! AcaCom organises peer tutoring matching and module-specific "
-                    "study groups each semester. Check our Telegram channel for the "
-                    "latest sign-up links."
-                ),
-            },
-            {
-                "question": "What academic workshops does AcaCom run?",
-                "answer": (
-                    "AcaCom runs workshops on academic writing, research skills, time "
-                    "management, and exam preparation throughout the year. Dates are "
-                    "announced on our Instagram page."
-                ),
-            },
-            {
-                "question": "Can I suggest a workshop topic?",
-                "answer": (
-                    "Absolutely! DM our Instagram page or use the 'Ask a Question' "
-                    "feature in this bot to send your suggestion to the AcaCom team."
-                ),
-            },
-        ],
+        "directors": [{"name": "John Doe", "tele_handle": "@john_doe"},
+                      {"name": "Jane Smith", "tele_handle": "@jane_smith"}],
+        "faqs": [],
     },
     {
-        "name": "Arts Committee (ArtsCom)",
-        "short_name": "artscom",
+        "name": "Active Community Engagement (ACE)",
+        "short_name": "ace",
         "overview": (
-            "ArtsCom nurtures the creative and artistic spirit of CAPT residents. "
-            "It organises concerts, art exhibitions, drama productions, open-mic nights, "
-            "and collaborations with external arts groups. ArtsCom welcomes residents of "
-            "all artistic backgrounds and skill levels."
+            "ACE provides CAPTains with sustained platforms to engage and build "
+            "relationships with community partners through meaningful, long-term "
+            "interaction. The wing focuses on mutual learning, empathy, and "
+            "empowerment across diverse communities."
         ),
-        "ig_handle": "@capt.artscom",
-        "tele_handle": "@captArtsCom",
+        "ig_handle": "",
+        "tele_handle": "",
         "website": "",
-        "directors": [
-            {"name": "ArtsCom Director", "tele_handle": "@capt_artsdir"},
-        ],
-        "faqs": [
-            {
-                "question": "Do I need prior experience to join ArtsCom?",
-                "answer": (
-                    "Not at all! ArtsCom welcomes everyone regardless of experience. "
-                    "Whether you are a seasoned performer or a curious beginner, there "
-                    "is a place for you."
-                ),
-            },
-            {
-                "question": "What kind of performances does ArtsCom organise?",
-                "answer": (
-                    "ArtsCom organises a variety of events including musical concerts, "
-                    "theatre productions, art exhibitions, open-mic nights, and creative "
-                    "writing showcases."
-                ),
-            },
-        ],
+        "directors": [],
+        "faqs": [],
     },
     {
-        "name": "Sports Committee (SportsCom)",
-        "short_name": "sportscom",
+        "name": "External Affairs Committee (EXA)",
+        "short_name": "exa",
         "overview": (
-            "SportsCom promotes a healthy and active lifestyle among CAPT residents. "
-            "It manages CAPT's sports facilities booking, organises intra-college sports "
-            "events, and represents CAPT in inter-college competitions such as ICG "
-            "(Inter-College Games). SportsCom also runs regular fitness sessions and "
-            "recreational sporting activities."
+            "EXA engages CAPT alumni through events and supports graduating "
+            "CAPTains in transitioning into alumni life. It is also the main "
+            "liaison between CAPT and other residential colleges, organizing "
+            "inter-college initiatives to strengthen community ties."
         ),
-        "ig_handle": "@capt.sportscom",
-        "tele_handle": "@captSportsCom",
+        "ig_handle": "",
+        "tele_handle": "",
         "website": "",
-        "directors": [
-            {"name": "SportsCom Director", "tele_handle": "@capt_sportsdir"},
-        ],
-        "faqs": [
-            {
-                "question": "How do I sign up for ICG (Inter-College Games)?",
-                "answer": (
-                    "ICG sign-ups are usually announced on our Instagram and Telegram "
-                    "channel at the start of each semester. Keep an eye out for "
-                    "registration links!"
-                ),
-            },
-            {
-                "question": "How do I book sports facilities?",
-                "answer": (
-                    "Facility bookings are managed through the NUS OSA booking portal. "
-                    "SportsCom also organises block bookings for popular time slots — "
-                    "check our Telegram channel for shared booking slots."
-                ),
-            },
-            {
-                "question": "What sports does CAPT compete in for ICG?",
-                "answer": (
-                    "CAPT participates in a wide range of ICG sports including football, "
-                    "basketball, volleyball, badminton, swimming, frisbee, and more. "
-                    "The full list varies each year."
-                ),
-            },
-        ],
+        "directors": [],
+        "faqs": [],
     },
     {
-        "name": "Welfare Committee (WelfareCom)",
-        "short_name": "welfarecom",
+        "name": "Social Innovation (SI)",
+        "short_name": "si",
         "overview": (
-            "WelfareCom looks after the well-being of all CAPT residents. It organises "
-            "welfare drives, distributes care packs during exam periods, runs mental "
-            "health awareness initiatives, and ensures residents feel supported and "
-            "valued throughout their stay."
+            "The Social Innovation wing addresses social problems by empathizing "
+            "with community needs and testing human-centered solutions. Guided by "
+            "innovation frameworks, SI aims to create sustainable long-term impact."
         ),
-        "ig_handle": "@capt.welfarecom",
-        "tele_handle": "@captWelfareCom",
+        "ig_handle": "",
+        "tele_handle": "",
         "website": "",
-        "directors": [
-            {"name": "WelfareCom Director", "tele_handle": "@capt_welfaredir"},
-        ],
-        "faqs": [
-            {
-                "question": "Does WelfareCom provide care packs during exams?",
-                "answer": (
-                    "Yes! WelfareCom distributes care packs to residents before major "
-                    "examination periods (mid-terms and finals). Look out for "
-                    "announcements on our Instagram page."
-                ),
-            },
-            {
-                "question": "What mental health resources are available?",
-                "answer": (
-                    "WelfareCom works with NUS Counselling & Psychological Services "
-                    "(CPS) and organises regular wellness activities. If you need "
-                    "immediate support, please reach out to NUS CPS at "
-                    "https://nus.edu.sg/alc/cps or call 6516-2376."
-                ),
-            },
-            {
-                "question": "How can I suggest a welfare initiative?",
-                "answer": (
-                    "DM our Instagram or use the 'Ask a Question' feature in this bot "
-                    "to share your idea with the WelfareCom team!"
-                ),
-            },
-        ],
+        "directors": [],
+        "faqs": [],
     },
     {
-        "name": "Publicity Committee (PubCom)",
+        "name": "Clubs & Societies (ClubSocs)",
+        "short_name": "clubsocs",
+        "overview": (
+            "ClubSocs is the heart of CAPT's arts and culture scene. It supports "
+            "interest groups such as CAPTunes, CAPTinSYNC, CAPT Coffee, CAPT "
+            "Baking, and CAPT Cooking, while organizing college-wide arts events."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Publicity Committee",
         "short_name": "pubcom",
         "overview": (
-            "PubCom is the creative arm of CAPT, responsible for producing all visual "
-            "and media content for the college. From event posters to photography and "
-            "videography, PubCom tells the story of life at CAPT through design and media."
+            "Publicity drives CAPT storytelling and creative communications, from "
+            "content and copywriting to design, social coverage, and web presence. "
+            "The committee supports CAPT's identity across digital and physical media."
         ),
-        "ig_handle": "@capt.pubcom",
-        "tele_handle": "@captPubCom",
+        "ig_handle": "",
+        "tele_handle": "",
         "website": "",
-        "directors": [
-            {"name": "PubCom Director", "tele_handle": "@capt_pubdir"},
-        ],
-        "faqs": [
-            {
-                "question": "What skills do I need to join PubCom?",
-                "answer": (
-                    "PubCom welcomes graphic designers, photographers, videographers, "
-                    "and copywriters. Experience with Adobe Photoshop, Illustrator, "
-                    "Premiere Pro or Canva is helpful but not required — we provide "
-                    "training!"
-                ),
-            },
-            {
-                "question": "Can I request PubCom to cover my event?",
-                "answer": (
-                    "Yes! Reach out to our Director via Telegram or DM our Instagram "
-                    "page at least 1 week in advance so we can schedule a photographer "
-                    "or videographer for your event."
-                ),
-            },
-        ],
+        "directors": [],
+        "faqs": [],
     },
     {
-        "name": "Environment Committee (EnvCom)",
-        "short_name": "envcom",
+        "name": "Sports Committee",
+        "short_name": "sportscom",
         "overview": (
-            "EnvCom champions sustainability and environmental consciousness within CAPT "
-            "and the wider NUS community. It organises eco-friendly initiatives, "
-            "upcycling workshops, community gardens, and collaborates with NUS "
-            "Sustainability to make CAPT a greener place to live."
+            "Sports Committee plans and executes CAPT sports events and outreach, "
+            "including major inter-house and college-wide sports initiatives. It "
+            "builds participation, bonding, and a strong active culture in CAPT."
         ),
-        "ig_handle": "@capt.envcom",
-        "tele_handle": "@captEnvCom",
+        "ig_handle": "",
+        "tele_handle": "",
         "website": "",
-        "directors": [
-            {"name": "EnvCom Director", "tele_handle": "@capt_envdir"},
-        ],
-        "faqs": [
-            {
-                "question": "How can I get involved in EnvCom initiatives?",
-                "answer": (
-                    "Follow our Instagram page for updates on upcoming activities like "
-                    "community gardening sessions, recycling drives, and sustainability "
-                    "workshops. You can join as a member or just participate in events!"
-                ),
-            },
-            {
-                "question": "Does CAPT have recycling facilities?",
-                "answer": (
-                    "Yes! CAPT has designated recycling points for paper, plastic, and "
-                    "e-waste. EnvCom also organises periodic clothing swap and upcycling "
-                    "events. Check our Instagram for locations and schedules."
-                ),
-            },
-        ],
+        "directors": [],
+        "faqs": [],
     },
     {
-        "name": "Dialogue Committee (DiaCom)",
-        "short_name": "diacom",
+        "name": "Student Affairs Committee (SAC)",
+        "short_name": "sac",
         "overview": (
-            "DiaCom fosters meaningful conversations and community cohesion at CAPT. "
-            "It organises town halls, inter-cultural dialogues, discussion forums, and "
-            "facilitated conversations on topics that matter to residents. DiaCom is "
-            "the voice of civil discourse within the college."
+            "SAC builds a vibrant and inclusive CAPT community through student "
+            "life and welfare events across the academic year. Signature efforts "
+            "include Inter-Neighbourhood Shield, welfare initiatives, and bonding "
+            "activities that strengthen house connections."
         ),
-        "ig_handle": "@capt.diacom",
-        "tele_handle": "@captDiaCom",
+        "ig_handle": "",
+        "tele_handle": "",
         "website": "",
-        "directors": [
-            {"name": "DiaCom Director", "tele_handle": "@capt_diadir"},
-        ],
-        "faqs": [
-            {
-                "question": "How do DiaCom town halls work?",
-                "answer": (
-                    "Town halls are open forums where residents can raise issues, give "
-                    "feedback, and discuss college life with SExC and college management. "
-                    "DiaCom facilitates these sessions and ensures all voices are heard."
-                ),
-            },
-            {
-                "question": "Can I propose a dialogue topic?",
-                "answer": (
-                    "Definitely! DM our Instagram or use the 'Ask a Question' feature "
-                    "in this bot to suggest a topic for a future dialogue session."
-                ),
-            },
-        ],
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Freshman Orientation Camp (FOC)",
+        "short_name": "foc",
+        "overview": (
+            "FOC plans and runs CAPT's freshman orientation experience. The team "
+            "designs a meaningful and engaging onboarding journey for incoming "
+            "students while building a strong, supportive batch culture."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPT Ambassadors",
+        "short_name": "capt_ambassadors",
+        "overview": (
+            "CAPT Ambassadors represent the college to guests and visitors through "
+            "tours and outreach events such as Family Night and Open House. The "
+            "committee develops communication and hosting skills while sharing CAPT "
+            "stories with the wider community."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPTSLAM Queensway",
+        "short_name": "captslam_queensway",
+        "overview": (
+            "CAPTSLAM Queensway is a leadership mentoring program for Secondary 3 "
+            "student leaders from Queensway Secondary School. It includes team "
+            "activities, reflection sessions, mentorship, and an overseas component."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPTSLAM Townsquare",
+        "short_name": "captslam_townsquare",
+        "overview": (
+            "CAPTSLAM Townsquare mentors Secondary 2 student leaders from New "
+            "Town Secondary School through value-driven engagement and leadership "
+            "development, culminating in an overseas service-learning experience."
+        ),
+        "ig_handle": "@captslam.townsquare",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPT Kamal",
+        "short_name": "capt_kamal",
+        "overview": (
+            "CAPT Kamal is a year-long committee that plans and runs a two-week "
+            "overseas program for communities from socio-economically disadvantaged "
+            "backgrounds, with a focus on empowerment and mutual growth."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPT Support",
+        "short_name": "capt_support",
+        "overview": (
+            "CAPT Support raises awareness of mental health and well-being through "
+            "training, workshops, campaigns, and peer support initiatives. The "
+            "committee equips CAPTains to care for themselves and others while "
+            "fostering a culture of empathy and support."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPT In Prayer",
+        "short_name": "capt_in_prayer",
+        "overview": (
+            "CAPT In Prayer builds a Christian support community in CAPT through "
+            "worship, prayer, fellowship, outreach, and bible study initiatives. "
+            "It focuses on shepherding leaders and creating safe spaces for faith "
+            "conversations in college life."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Tech Comm",
+        "short_name": "tech_comm",
+        "overview": (
+            "Tech Comm develops and maintains digital solutions to improve student "
+            "life in CAPT. It brings together product, innovation, and development "
+            "workstreams to solve pain points across committees."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Roc House Committee",
+        "short_name": "roc_hc",
+        "overview": (
+            "Roc House Committee fosters a lively and inclusive house culture "
+            "through sports, music, social activities, welfare, and community "
+            "bonding, with the goal of making Roc one big family."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Dragon House Committee",
+        "short_name": "dragon_hc",
+        "overview": (
+            "Dragon House Committee plans house activities, creates social content, "
+            "and drives welfare initiatives to keep the house welcoming, vibrant, "
+            "and closely knit."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Garuda House Committee",
+        "short_name": "garuda_hc",
+        "overview": (
+            "Garuda House Committee builds house spirit through programs, publicity, "
+            "admin support, and innovative initiatives, creating a warm and energetic "
+            "community experience for Garudians."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Phoenix House Committee",
+        "short_name": "phoenix_hc",
+        "overview": (
+            "Phoenix House Committee fosters community and camaraderie through "
+            "programming, welfare, publicity, and design initiatives. Its mission "
+            "is to create a warm, inclusive home for all Firebirds."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Tulpar House Committee",
+        "short_name": "tulpar_hc",
+        "overview": (
+            "Tulpar House Committee cultivates friendship, support, and belonging "
+            "among Tulpies through house events, publicity, and welfare initiatives "
+            "throughout the year."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
     },
 ]
 
-# Build a lookup dictionary keyed by short_name for fast access
+
+ACE_SUBCOMMITTEES: list[dict] = [
+    {
+        "name": "CAPT in Silence",
+        "short_name": "ace_silence",
+        "overview": (
+            "CAPT in Silence engages the Deaf community and builds communication "
+            "understanding so CAPTains can form meaningful long-term relationships."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPT in the Dark",
+        "short_name": "ace_dark",
+        "overview": (
+            "CAPT in the Dark seeks to challenge perceptions of the visually "
+            "impaired community while building confidence and strengths among "
+            "participating students."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPTSpark",
+        "short_name": "ace_captspark",
+        "overview": (
+            "CAPTSpark organizes activities for special needs children while "
+            "equipping CAPTains with meaningful learning experiences in the "
+            "special needs space."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Constellations",
+        "short_name": "ace_constellations",
+        "overview": (
+            "Constellations empowers boys to discover their potential through "
+            "different development mediums, with music as a key avenue."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "ACE Elderly",
+        "short_name": "ace_elderly",
+        "overview": (
+            "ACE Elderly connects CAPTains with the elderly community to promote "
+            "mutual empowerment, understanding, and meaningful interaction."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "ACE Homes",
+        "short_name": "ace_homes",
+        "overview": (
+            "ACE Homes explores different forms of homelessness through "
+            "befriending rough sleepers and creating intentional opportunities "
+            "for interaction."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Kindle",
+        "short_name": "ace_kindle",
+        "overview": (
+            "Through one-to-one mentoring, Kindle helps mentors nurture confidence "
+            "and social-emotional growth in mentees."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Kindle+",
+        "short_name": "ace_kindle_plus",
+        "overview": (
+            "Kindle+ focuses on meaningful values formation and growth among "
+            "foster youths through sustained engagement."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "ACE Migrants",
+        "short_name": "ace_migrants",
+        "overview": (
+            "ACE Migrants creates a platform for bonds within migrant communities "
+            "while fostering mutual learning and empathy between CAPTains and migrants."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "PACE",
+        "short_name": "ace_pace",
+        "overview": (
+            "PACE gives volunteers insight into the world of stray animals and "
+            "caretakers, enabling hands-on impact for vulnerable pets and communities."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "Stella",
+        "short_name": "ace_stella",
+        "overview": (
+            "Stella centers on mentor-mentee empowerment and creates a caring, "
+            "growth-oriented environment through shared activities and relationships."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+    {
+        "name": "CAPT Renew",
+        "short_name": "ace_renew",
+        "overview": (
+            "CAPT Renew supports and empowers halfway house residents on their "
+            "reintegration journeys through intentional conversations and activities."
+        ),
+        "ig_handle": "",
+        "tele_handle": "",
+        "website": "",
+        "directors": [],
+        "faqs": [],
+    },
+]
+
+
+# Build lookup dictionaries keyed by short_name for fast access.
 COMMITTEES_BY_KEY: dict[str, dict] = {c["short_name"]: c for c in COMMITTEES}
+ACE_SUBCOMMITTEES_BY_KEY: dict[str, dict] = {
+    c["short_name"]: c for c in ACE_SUBCOMMITTEES
+}

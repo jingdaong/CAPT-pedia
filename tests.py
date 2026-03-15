@@ -125,8 +125,8 @@ class TestBotHelpers(unittest.TestCase):
         self.assertIn(comm["overview"], text)
 
     def test_build_comm_detail_text_contains_ig_handle(self):
-        # Find a committee with an ig_handle
-        comm = next(c for c in COMMITTEES if c["ig_handle"])
+        # Use a synthetic handle so this test does not depend on fixture values.
+        comm = {**COMMITTEES[0], "ig_handle": "@example_handle"}
         text = self.bot.build_comm_detail_text(comm)
         self.assertIn(comm["ig_handle"], text)
 
