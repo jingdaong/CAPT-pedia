@@ -328,11 +328,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "CAPT in Silence engages the Deaf community and builds communication "
             "understanding so CAPTains can form meaningful long-term relationships."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/captinsilence/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-capt-in-silence/",
+        "directors": [{"name": "Emily Chen", "tele_handle": "@emily_chen"}],
+        "faqs": [{"question": "What is CAPT in Silence?", "answer": "CAPT in Silence is a committee that engages the Deaf community and builds communication understanding so CAPTains can form meaningful long-term relationships."}],
     },
     {
         "name": "CAPT in the Dark",
@@ -342,11 +342,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "impaired community while building confidence and strengths among "
             "participating students."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/captinthedark/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-capt-in-the-dark/",
+        "directors": [{"name": "David Lim", "tele_handle": "@david_lim"}],
+        "faqs": [{"question": "What is CAPT in the Dark?", "answer": "CAPT in the Dark is a committee that seeks to challenge perceptions of the visually impaired community while building confidence and strengths among participating students."}],
     },
     {
         "name": "CAPTSpark",
@@ -356,11 +356,12 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "equipping CAPTains with meaningful learning experiences in the "
             "special needs space."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/ace.captspark/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-captspark/",
+        "directors": [{"name": "Emily Chen", "tele_handle": "@emily_chen",
+                      "name": "David Lim", "tele_handle": "@david_lim"}],
+        "faqs": [{"question": "What is CAPTSpark?", "answer": "CAPTSpark is a committee that organizes activities for special needs children while equipping CAPTains with meaningful learning experiences in the special needs space."}],
     },
     {
         "name": "Constellations",
@@ -369,11 +370,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "Constellations empowers boys to discover their potential through "
             "different development mediums, with music as a key avenue."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.constellations/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-ace-constellations/",
+        "directors": [{"name": "Charlie Lim", "tele_handle": "@charlie_lim"}],
+        "faqs": [{"question": "What is Constellations?", "answer": "Constellations is a committee focused on empowering boys to discover their potential through different development mediums, with music as a key avenue."}],
     },
     {
         "name": "ACE Elderly",
@@ -382,11 +383,13 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "ACE Elderly connects CAPTains with the elderly community to promote "
             "mutual empowerment, understanding, and meaningful interaction."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.elderly/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-ace-elderly/",
+        "directors": [{"name": "Bob Tan", "tele_handle": "@bob_tan"}],
+        "faqs": [{"question": "What is ACE Elderly?", "answer": "ACE Elderly connects CAPTains with the elderly community to promote mutual empowerment, understanding, and meaningful interaction.",
+                 "question": "How can I get involved with ACE Elderly?", "answer": "You can get involved with ACE Elderly by participating in our activities that connect CAPTains with the elderly community. Follow our Instagram @capt.elderly for updates on upcoming events and opportunities to engage.",
+                 "question": "What kind of activities does ACE Elderly organize?", "answer": "ACE Elderly organizes a variety of activities such as befriending sessions, intergenerational bonding events, and community outreach initiatives that foster meaningful interaction between CAPTains and the elderly community."}],
     },
     {
         "name": "ACE Homes",
@@ -396,11 +399,13 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "befriending rough sleepers and creating intentional opportunities "
             "for interaction."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.homes/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-ace-homes/",
+        "directors": [{"name": "Bob Tan", "tele_handle": "@bob_tan",
+                      "name": "Emily Chen", "tele_handle": "@emily_chen"}],
+        "faqs": [{"question": "What is ACE Homes?", "answer": "ACE Homes explores different forms of homelessness through befriending rough sleepers and creating intentional opportunities for interaction.",
+                 "question": "How can I get involved with ACE Homes?", "answer": "You can get involved with ACE Homes by participating in our befriending sessions with rough sleepers and joining our events that create opportunities for interaction. Follow our Instagram @capt.homes for updates on upcoming activities."}],
     },
     {
         "name": "Kindle",
@@ -409,11 +414,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "Through one-to-one mentoring, Kindle helps mentors nurture confidence "
             "and social-emotional growth in mentees."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.kindle/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-kindle/",
+        "directors": [{"name": "Alice Lee", "tele_handle": "@alice_lee"}],
+        "faqs": [{"question": "What is Kindle?", "answer": "Kindle is a committee that, through one-to-one mentoring, helps mentors nurture confidence and social-emotional growth in mentees."}],
     },
     {
         "name": "Kindle+",
@@ -422,11 +427,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "Kindle+ focuses on meaningful values formation and growth among "
             "foster youths through sustained engagement."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.kindleplus/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-kindleplus/",
+        "directors": [{"name": "Alice Lee", "tele_handle": "@alice_lee"}],
+        "faqs": [{"question": "What is Kindle+?", "answer": "Kindle+ focuses on meaningful values formation and growth among foster youths through sustained engagement."}],
     },
     {
         "name": "ACE Migrants",
@@ -435,11 +440,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "ACE Migrants creates a platform for bonds within migrant communities "
             "while fostering mutual learning and empathy between CAPTains and migrants."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.migrants/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-ace-migrants/",
+        "directors": [{"name": "David Lim", "tele_handle": "@david_lim"}],
+        "faqs": [{"question": "What is ACE Migrants?", "answer": "ACE Migrants creates a platform for bonds within migrant communities while fostering mutual learning and empathy between CAPTains and migrants."}],
     },
     {
         "name": "PACE",
@@ -448,11 +453,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "PACE gives volunteers insight into the world of stray animals and "
             "caretakers, enabling hands-on impact for vulnerable pets and communities."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.pace/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-pace/",
+        "directors": [{"name": "Emily Chen", "tele_handle": "@emily_chen"}],
+        "faqs": [{"question": "What is PACE?", "answer": "PACE is a committee that gives volunteers insight into the world of stray animals and caretakers."}],
     },
     {
         "name": "Stella",
@@ -461,11 +466,11 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "Stella centers on mentor-mentee empowerment and creates a caring, "
             "growth-oriented environment through shared activities and relationships."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/acecapt.stella/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-stella/",
+        "directors": [{"name": "Charlie Lim", "tele_handle": "@charlie_lim"},],
+        "faqs": [{"question": "What is Stella?", "answer": "Stella is a committee that centers on mentor-mentee empowerment and creates a caring, growth-oriented environment through shared activities and relationships."}],
     },
     {
         "name": "CAPT Renew",
@@ -474,11 +479,12 @@ ACE_SUBCOMMITTEES: list[dict] = [
             "CAPT Renew supports and empowers halfway house residents on their "
             "reintegration journeys through intentional conversations and activities."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.renew/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement-capt-renew/",
+        "directors": [{"name": "Alice Lee", "tele_handle": "@alice_lee"},
+                      {"name": "Bob Tan", "tele_handle": "@bob_tan"}],
+        "faqs": [{"question": "What is CAPT Renew?", "answer": "CAPT Renew supports and empowers halfway house residents on their reintegration journeys through intentional conversations and activities."}],
     },
 ]
 
