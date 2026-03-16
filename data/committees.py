@@ -255,11 +255,14 @@ COMMITTEES: list[dict] = [
             "through sports, music, social activities, welfare, and community "
             "bonding, with the goal of making Roc one big family."
         ),
-        "ig_handle": "",
+        "ig_handle":"https://www.instagram.com/roctographer?igsh=MWp3aXV0NWJkdTIwbQ==",
         "tele_handle": "",
         "website": "",
         "directors": [],
-        "faqs": [],
+        "faqs": [{
+            "question": "What is the mission of the Roc House Committee?",
+            "answer": "The mission of the Roc House Committee is to foster a lively and inclusive house culture through sports, music, social activities, welfare, and community bonding."
+        }],
     },
     {
         "name": "Dragon House Committee",
@@ -269,11 +272,14 @@ COMMITTEES: list[dict] = [
             "and drives welfare initiatives to keep the house welcoming, vibrant, "
             "and closely knit."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/littlepocketdragons?igsh=NHZ0b2cwNGlkZzRp",
         "tele_handle": "",
-        "website": "",
+        "website": "https://captlife.com/life/neighbourhoods/dragon-neighbourhood-page/",
         "directors": [],
-        "faqs": [],
+        "faqs": [{
+            "question": "What is the mission of the Dragon House Committee?",
+            "answer": "The mission of the Dragon House Committee is to plan house activities, create social content, and drive welfare initiatives to keep the house welcoming, vibrant, and closely knit."
+        }],
     },
     {
         "name": "Garuda House Committee",
@@ -283,11 +289,14 @@ COMMITTEES: list[dict] = [
             "admin support, and innovative initiatives, creating a warm and energetic "
             "community experience for Garudians."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/bayofbanana?igsh=NGprbXNsaXIzdXAw",
         "tele_handle": "",
         "website": "",
         "directors": [],
-        "faqs": [],
+        "faqs": [{
+            "question": "What is the mission of the Garuda House Committee?",
+            "answer": "The mission of the Garuda House Committee is to build house spirit through programs, publicity, admin support, and innovative initiatives, creating a warm and energetic community experience for Garudians."
+        }],
     },
     {
         "name": "Phoenix House Committee",
@@ -297,11 +306,14 @@ COMMITTEES: list[dict] = [
             "programming, welfare, publicity, and design initiatives. Its mission "
             "is to create a warm, inclusive home for all Firebirds."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/captfirebird?igsh=MWhtNG1sdng2dG1pdw==",
         "tele_handle": "",
-        "website": "",
+        "website": "https://captlife.com/life/neighbourhoods/phoenix-neighbourhood-page/",
         "directors": [],
-        "faqs": [],
+        "faqs": [{
+            "question": "What is the mission of the Phoenix House Committee?",
+            "answer": "The mission of the Phoenix House Committee is to create a warm, inclusive home for all Firebirds."
+        }],
     },
     {
         "name": "Tulpar House Committee",
@@ -311,11 +323,14 @@ COMMITTEES: list[dict] = [
             "among Tulpies through house events, publicity, and welfare initiatives "
             "throughout the year."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/tulparazzi?igsh=c3NsNzUzYTlva2dh",
         "tele_handle": "",
         "website": "",
         "directors": [],
-        "faqs": [],
+        "faqs": [{
+            "question": "What is the mission of the Tulpar House Committee?",
+            "answer": "The mission of the Tulpar House Committee is to cultivate friendship, support, and belonging among Tulpies through house events, publicity, and welfare initiatives throughout the year."
+        }],
     },
 ]
 
