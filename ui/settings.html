@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CAPT Committee Q&A Portal — Settings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="portal">
+  <div class="layout container">
+    <aside class="sidebar" aria-label="Navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-avatar" aria-hidden="true">S</div>
+        <div>
+          <h3>Hi, Sarah!</h3>
+          <p class="small">Comm Director</p>
+        </div>
+      </div>
+      <ul class="sidebar-nav" role="menu">
+        <li><a href="dashboard.html" role="menuitem"><span class="icon">🏠</span> Dashboard</a></li>
+        <li><a href="my-questions.html" role="menuitem"><span class="icon">💬</span> My Questions</a></li>
+        <li><a href="settings.html" class="active" role="menuitem"><span class="icon">⚙️</span> Settings</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="small">Logged in as <strong>sarah.tan@capt.sg</strong></div>
+      </div>
+    </aside>
+
+    <main class="portal-main" role="main">
+      <div class="header-row">
+        <div>
+          <h1>Settings</h1>
+          <p>Manage your account and notification settings here.</p>
+        </div>
+        <div class="header-icons" aria-label="Settings shortcuts">
+          <button class="icon-button" title="Notifications" aria-label="Notifications">🔔</button>
+          <button class="icon-button" title="Help" aria-label="Help">❓</button>
+        </div>
+      </div>
+
+      <div class="settings-grid">
+        <section class="settings-card" aria-labelledby="account-details">
+          <h3 id="account-details">Account Details</h3>
+          <div class="profile-row">
+            <div class="profile-avatar">S</div>
+            <div class="profile-meta">
+              <div class="name">Sarah Tan</div>
+              <div class="email">sarah.tan@capt.sg</div>
+            </div>
+            <button class="btn btn-primary" style="height: 42px;">Edit</button>
+          </div>
+
+          <form class="settings-form" aria-label="Change account details">
+            <div class="settings-row">
+              <div class="field">
+                <label for="email-field">Email</label>
+                <input id="email-field" class="input" type="text" value="sarah.tan@capt.sg" />
+              </div>
+              <button class="btn btn-secondary" type="button">Edit</button>
+            </div>
+
+            <div class="settings-row">
+              <div class="field">
+                <label for="password-field">Password</label>
+                <input id="password-field" class="input" type="password" value="hunter2" />
+              </div>
+              <button class="btn btn-primary" type="button">Save Changes</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="settings-card" aria-labelledby="notification-settings">
+          <h3 id="notification-settings">Notification Settings</h3>
+          <div class="settings-row">
+            <div class="field">
+              <label><input type="checkbox" checked /> Notify me about new questions</label>
+            </div>
+            <div class="field">
+              <label><input type="checkbox" checked /> Notify me about replies to my answers</label>
+            </div>
+          </div>
+
+          <div class="settings-row" style="display: grid; gap: 0.55rem;">
+            <label for="notify-email">Send notifications to:</label>
+            <input id="notify-email" class="input" type="text" value="sarah.tan@capt.sg" />
+          </div>
+        </section>
+
+        <section class="settings-card" aria-labelledby="telegram-settings">
+          <h3 id="telegram-settings">Telegram Notification Preferences</h3>
+          <div class="settings-row">
+            <div class="field">
+              <label><input type="checkbox" checked /> Enable Telegram notifications</label>
+            </div>
+            <div class="field">
+              <label><input type="checkbox" checked /> Notify me about new questions</label>
+            </div>
+          </div>
+
+          <div class="settings-row" style="display: grid; gap: 0.55rem;">
+            <label for="telegram-handle">Telegram Bot</label>
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 0.7rem;">
+              <input id="telegram-handle" class="input" type="text" value="@yourtelebot" />
+              <button class="btn btn-secondary" type="button">Link Telegram bot</button>
+            </div>
+          </div>
+
+          <div class="notice" style="margin-top: 1.2rem;">
+            ✨ Tip: Use the bot handle above to connect this portal with Telebot message notifications.
+          </div>
+
+          <div style="margin-top: 1.25rem; display: flex; justify-content: flex-end;">
+            <button class="btn btn-primary" type="button">Save</button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
