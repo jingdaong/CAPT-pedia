@@ -43,7 +43,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -58,7 +58,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -72,7 +72,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -86,7 +86,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -100,7 +100,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -114,7 +114,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -129,7 +129,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -143,7 +143,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -158,7 +158,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -172,7 +172,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -186,7 +186,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "@captslam.townsquare",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -200,7 +200,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -215,7 +215,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -230,7 +230,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -244,7 +244,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -258,7 +258,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -272,7 +272,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -286,7 +286,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -300,7 +300,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -314,7 +314,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
 ]
@@ -331,7 +331,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -345,7 +345,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -359,7 +359,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -372,7 +372,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -385,7 +385,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -399,7 +399,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -412,7 +412,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -425,7 +425,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -438,7 +438,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -451,7 +451,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -464,7 +464,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -477,7 +477,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
 ]
@@ -488,3 +488,5 @@ COMMITTEES_BY_KEY: dict[str, dict] = {c["short_name"]: c for c in COMMITTEES}
 ACE_SUBCOMMITTEES_BY_KEY: dict[str, dict] = {
     c["short_name"]: c for c in ACE_SUBCOMMITTEES
 }
+
+
