@@ -13,6 +13,8 @@ A Telegram bot that helps NUS CAPT (College of Alice & Peter Tan) freshmen disco
 | ❓ FAQs | Browse per-committee FAQs with a single tap |
 | ✉️ Anonymous Questions | Send questions anonymously to committee directors via the bot |
 | 💬 Admin Replies | Directors reply to anonymous questions using `/reply` and the bot delivers the response |
+| 🌐 Directors Portal | Web dashboard for directors to view pending questions and reply from one place |
+| 🔐 NUS Email 2-Step Login | Portal sign-in via NUS email + one-time verification code |
 | 🤖 AI Chatbot | Ask the AI assistant (powered by OpenAI) any CAPT-related question using `/ask` |
 
 ---
@@ -48,6 +50,22 @@ Edit `.env`:
 # Required
 BOT_TOKEN=your_telegram_bot_token_here
 ADMIN_CHAT_ID=your_admin_group_chat_id_here
+JWT_SECRET=your_random_jwt_secret
+
+# Directors Portal email OTP auth (required for portal)
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_USERNAME=your_smtp_username
+SMTP_PASSWORD=your_smtp_password
+SMTP_FROM=no-reply@u.nus.edu
+
+# Optional for portal auth behavior
+ALLOWED_EMAIL_DOMAINS=u.nus.edu
+OTP_LENGTH=6
+OTP_TTL_MINUTES=10
+OTP_RESEND_COOLDOWN_SECONDS=60
+OTP_MAX_ATTEMPTS=5
+SECURE_COOKIES=false
 
 # Optional – enables the /ask AI chatbot feature
 OPENAI_API_KEY=your_openai_api_key_here
@@ -58,7 +76,11 @@ OPENAI_API_KEY=your_openai_api_key_here
 ### 4. Run
 
 ```bash
+# Telegram bot
 python bot.py
+
+# Directors portal (separate terminal)
+python server.py
 ```
 
 ---
@@ -125,6 +147,10 @@ python -m pytest tests.py -v
 ```
 CAPT-pedia/
 ├── bot.py              # Main bot logic and conversation handlers
+├── server.py           # FastAPI backend for directors portal
+├── database.py         # SQLAlchemy models/shared DB helpers
+├── static/
+│   └── index.html      # Directors portal frontend
 ├── data/
 │   ├── __init__.py
 │   └── committees.py   # Committee data (overview, FAQs, resources)
@@ -143,3 +169,8 @@ CAPT-pedia/
 | `python-telegram-bot==20.7` | Telegram Bot API wrapper |
 | `python-dotenv==1.0.1` | Load `.env` configuration |
 | `openai==1.12.0` | AI chatbot (optional) |
+| `fastapi==0.111.0` | Directors portal backend APIs |
+| `uvicorn[standard]==0.29.0` | ASGI server for portal backend |
+| `sqlalchemy==2.0.30` | Persistent storage for questions and OTP codes |
+| `httpx==0.27.0` | Outbound HTTP calls (Telegram API from portal) |
+| `python-jose[cryptography]==3.3.0` | JWT session signing and verification |

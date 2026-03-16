@@ -43,6 +43,14 @@ from data.committees import (
     COMMITTEES_BY_KEY,
 )
 
+from database import (
+    SessionLocal,
+    answer_question as db_answer_question,
+    create_question as db_create_question,
+    get_question as db_get_question,
+    init_db,
+)
+
 load_dotenv()
 
 # ---------------------------------------------------------------------------
@@ -77,7 +85,10 @@ OPENAI_API_KEY: Optional[str] = os.environ.get("OPENAI_API_KEY")
 # In-memory store for pending anonymous questions
 # Maps question_id (str) -> sender user_id (int)
 # ---------------------------------------------------------------------------
-pending_questions: dict[str, int] = {}
+PORTAL_URL: Optional[str] = os.environ.get("PORTAL_URL")
+
+# Ensure DB tables exist when the bot starts
+init_db()
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -452,17 +463,32 @@ async def receive_question(
 
     # Generate a unique ID for this question so admins can reply to it
     question_id = str(uuid.uuid4())[:8].upper()
-    pending_questions[question_id] = user_id
+
+    # Persist question to database
+    with SessionLocal() as db:
+        db_create_question(
+            db,
+            question_id=question_id,
+            committee_short_name=short_name or "unknown",
+            committee_name=comm["name"] if comm else "Unknown Committee",
+            question_text=question_text,
+            telegram_user_id=user_id,
+        )
 
     comm_name = comm["name"] if comm else "Unknown Committee"
 
     # Forward to admin chat
+    portal_hint = (
+        f"\n\nOr reply via the portal: {PORTAL_URL}"
+        if PORTAL_URL else ""
+    )
     admin_message = (
         f"📬 <b>New Anonymous Question</b>\n\n"
         f"Committee: <b>{html.escape(comm_name)}</b>\n"
         f"Question ID: <code>{html.escape(question_id)}</code>\n\n"
         f"<i>{html.escape(question_text)}</i>\n\n"
         f"To reply, use:\n<code>/reply {html.escape(question_id)} &lt;your reply&gt;</code>"
+        f"{portal_hint}"
     )
     try:
         await context.bot.send_message(
@@ -515,8 +541,10 @@ async def reply_to_question(
     question_id = args[0].upper()
     reply_text = " ".join(args[1:])
 
-    user_id = pending_questions.get(question_id)
-    if user_id is None:
+    with SessionLocal() as db:
+        q = db_get_question(db, question_id)
+
+    if q is None or q.status == "answered":
         await update.message.reply_text(
             f"⚠️ Question ID <code>{html.escape(question_id)}</code> not found or already answered.",
             parse_mode=ParseMode.HTML,
@@ -525,15 +553,21 @@ async def reply_to_question(
 
     try:
         await context.bot.send_message(
-            chat_id=user_id,
+            chat_id=q.telegram_user_id,
             text=(
                 f"💬 <b>Reply to your anonymous question</b> (ID: <code>{html.escape(question_id)}</code>)\n\n"
                 f"{html.escape(reply_text)}"
             ),
             parse_mode=ParseMode.HTML,
         )
-        # Remove from pending after successful reply
-        del pending_questions[question_id]
+        # Mark as answered in the database
+        with SessionLocal() as db:
+            db_answer_question(
+                db,
+                question_id,
+                reply_text,
+                answered_by=f"@{update.effective_user.username}" if update.effective_user.username else str(update.effective_user.id),
+            )
         await update.message.reply_text(
             f"✅ Reply sent successfully for question <code>{html.escape(question_id)}</code>.",
             parse_mode=ParseMode.HTML,
