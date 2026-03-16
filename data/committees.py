@@ -26,10 +26,19 @@ COMMITTEES: list[dict] = [
         ),
         "ig_handle": "@capt_csc_secretariat",
         "tele_handle": "@capt_csc_secretariat",
-        "website": "",
+        "website": "https://capt.nus.edu.sg/people/college-students-committee",
         "directors": [{"name": "John Doe", "tele_handle": "@john_doe"},
                       {"name": "Jane Smith", "tele_handle": "@jane_smith"}],
-        "faqs": [],
+        "faqs": [
+            {
+                "question": "What does CSC Secretariat handle?",
+                "answer": "CSC Secretariat supports administrative and finance operations across CSC committees.",
+            },
+            {
+                "question": "Do I need prior finance experience to join?",
+                "answer": "No, training is provided and members can learn on the job.",
+            },
+        ],
     },
     {
         "name": "Active Community Engagement (ACE)",
@@ -40,11 +49,20 @@ COMMITTEES: list[dict] = [
             "interaction. The wing focuses on mutual learning, empathy, and "
             "empowerment across diverse communities."
         ),
-        "ig_handle": "",
-        "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "ig_handle": "https://www.instagram.com/captacewing/",
+        "tele_handle": "https://t.me/+7gsh4UetnudhNGQ9",
+        "website": "https://captlife.com/archive-2324-csc/active-community-engagement/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What kind of activities does ACE run?",
+                "answer": "ACE runs sustained community engagement projects with long-term partners.",
+            },
+            {
+                "question": "Can I join ACE without volunteer experience?",
+                "answer": "Yes, new members are guided through onboarding and project context.",
+            },
+        ],
     },
     {
         "name": "External Affairs Committee (EXA)",
@@ -55,11 +73,20 @@ COMMITTEES: list[dict] = [
             "liaison between CAPT and other residential colleges, organizing "
             "inter-college initiatives to strengthen community ties."
         ),
-        "ig_handle": "",
-        "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "ig_handle": "https://www.instagram.com/capt.exa/",
+        "tele_handle": "https://l.instagram.com/?u=https%3A%2F%2Ft.me%2FCAPT_EXA%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnfWa-YAK8XsI8x7BS6Q4TCoEx7V90OCpHVETyLbTdZamO1078Hf5Cc8UhgAQ_aem_m8uU314RYKdOF7rYS49giA&e=AT4tlKkSJnWCbvbLxPOMR-TWrdBCmQ6N3jiBVSiF9XkbWpkyoNpOB1uYvWyBLuymainkyCi0XoUUjBW01fRZQamQhGt1KEHl5aCEsYpEew",
+        "website": "https://captlife.com/csc/exa/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What does EXA focus on?",
+                "answer": "EXA focuses on alumni engagement and inter-college collaborations.",
+            },
+            {
+                "question": "Are there event planning opportunities in EXA?",
+                "answer": "Yes, members can plan and run outreach and networking events.",
+            },
+        ],
     },
     {
         "name": "Social Innovation (SI)",
@@ -69,11 +96,20 @@ COMMITTEES: list[dict] = [
             "with community needs and testing human-centered solutions. Guided by "
             "innovation frameworks, SI aims to create sustainable long-term impact."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/si.capt/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/csc/si/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What does Social Innovation do?",
+                "answer": "SI develops and tests human-centered solutions for social issues.",
+            },
+            {
+                "question": "Do I need a technical background to join SI?",
+                "answer": "No, SI welcomes members from diverse backgrounds and skill sets.",
+            },
+        ],
     },
     {
         "name": "Clubs & Societies (ClubSocs)",
@@ -83,11 +119,20 @@ COMMITTEES: list[dict] = [
             "interest groups such as CAPTunes, CAPTinSYNC, CAPT Coffee, CAPT "
             "Baking, and CAPT Cooking, while organizing college-wide arts events."
         ),
-        "ig_handle": "",
-        "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "ig_handle": "https://www.instagram.com/capt.clubsocs/",
+        "tele_handle": "https://t.me/captclubsocs",
+        "website": "https://captlife.com/csc/clubs-societies-committee/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "Can I propose a new interest group under ClubSocs?",
+                "answer": "Yes, members can pitch and develop new arts or culture interest groups.",
+            },
+            {
+                "question": "How does ClubSocs support events?",
+                "answer": "ClubSocs supports planning, coordination, and publicity for arts events.",
+            },
+        ],
     },
     {
         "name": "Publicity Committee",
@@ -97,11 +142,20 @@ COMMITTEES: list[dict] = [
             "content and copywriting to design, social coverage, and web presence. "
             "The committee supports CAPT's identity across digital and physical media."
         ),
-        "ig_handle": "",
-        "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "ig_handle": "https://www.instagram.com/capt.publicity/",
+        "tele_handle": "https://t.me/captpubcom",
+        "website": "https://captlife.com/csc/publicity-committee/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What roles are available in Publicity Committee?",
+                "answer": "Members can contribute in writing, design, photography, and social media.",
+            },
+            {
+                "question": "Do I need design experience to join Publicity?",
+                "answer": "No, beginners are welcome and can learn through projects.",
+            },
+        ],
     },
     {
         "name": "Sports Committee",
@@ -111,11 +165,20 @@ COMMITTEES: list[dict] = [
             "including major inter-house and college-wide sports initiatives. It "
             "builds participation, bonding, and a strong active culture in CAPT."
         ),
-        "ig_handle": "",
-        "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "ig_handle": "https://www.instagram.com/capt.sports/",
+        "tele_handle": "https://t.me/captsports",
+        "website": "https://captlife.com/csc/sports-committee/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What events does Sports Committee organize?",
+                "answer": "Sports Committee organizes inter-house and college-wide sports activities.",
+            },
+            {
+                "question": "Can non-athletes join Sports Committee?",
+                "answer": "Yes, all skill levels are welcome to contribute and participate.",
+            },
+        ],
     },
     {
         "name": "Student Affairs Committee (SAC)",
@@ -126,11 +189,20 @@ COMMITTEES: list[dict] = [
             "include Inter-Neighbourhood Shield, welfare initiatives, and bonding "
             "activities that strengthen house connections."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/sac.capt/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/archive-2324-csc/student-affairs-committee/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What does SAC do throughout the year?",
+                "answer": "SAC plans welfare and student life activities across both semesters.",
+            },
+            {
+                "question": "How can I contribute to SAC events?",
+                "answer": "You can help with ideation, logistics, publicity, and event operations.",
+            },
+        ],
     },
     {
         "name": "Freshman Orientation Camp (FOC)",
@@ -140,11 +212,20 @@ COMMITTEES: list[dict] = [
             "designs a meaningful and engaging onboarding journey for incoming "
             "students while building a strong, supportive batch culture."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/captcamp2025/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/life/freshman-orientation-programme-2025/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "When does FOC planning start?",
+                "answer": "FOC planning usually starts before the new academic year begins.",
+            },
+            {
+                "question": "Can first-time organizers join FOC?",
+                "answer": "Yes, first-time organizers are welcome and guided by seniors.",
+            },
+        ],
     },
     {
         "name": "CAPT Ambassadors",
@@ -155,11 +236,20 @@ COMMITTEES: list[dict] = [
             "committee develops communication and hosting skills while sharing CAPT "
             "stories with the wider community."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/capt.ambass/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/csc/csc-affiliated/capt-ambassadors/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What do CAPT Ambassadors do?",
+                "answer": "CAPT Ambassadors host guests, conduct tours, and support outreach events.",
+            },
+            {
+                "question": "Will there be training before events?",
+                "answer": "Yes, briefing and preparation are provided before each outreach event.",
+            },
+        ],
     },
     {
         "name": "CAPTSLAM Queensway",
@@ -169,11 +259,20 @@ COMMITTEES: list[dict] = [
             "student leaders from Queensway Secondary School. It includes team "
             "activities, reflection sessions, mentorship, and an overseas component."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/captslam.queensway/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/csc/csc-affiliated/captslam-queensway/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "Who does CAPTSLAM Queensway mentor?",
+                "answer": "The program mentors student leaders from Queensway Secondary School.",
+            },
+            {
+                "question": "What is the commitment level for mentors?",
+                "answer": "Mentors commit to regular sessions, planning, and reflective activities.",
+            },
+        ],
     },
     {
         "name": "CAPTSLAM Townsquare",
@@ -183,11 +282,20 @@ COMMITTEES: list[dict] = [
             "Town Secondary School through value-driven engagement and leadership "
             "development, culminating in an overseas service-learning experience."
         ),
-        "ig_handle": "@captslam.townsquare",
+        "ig_handle": "https://www.instagram.com/captslam.townsquare/",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/csc/csc-affiliated/captslam-townsquare/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "Who does CAPTSLAM Townsquare work with?",
+                "answer": "It works with student leaders from New Town Secondary School.",
+            },
+            {
+                "question": "What can mentors gain from CAPTSLAM Townsquare?",
+                "answer": "Mentors develop facilitation, empathy, and leadership skills.",
+            },
+        ],
     },
     {
         "name": "CAPT Kamal",
@@ -197,11 +305,20 @@ COMMITTEES: list[dict] = [
             "overseas program for communities from socio-economically disadvantaged "
             "backgrounds, with a focus on empowerment and mutual growth."
         ),
-        "ig_handle": "",
+        "ig_handle": "https://www.instagram.com/captkamalcamels/?hl=en",
         "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "website": "https://captlife.com/csc/csc-affiliated/capt-kamal/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What is CAPT Kamal's main focus?",
+                "answer": "CAPT Kamal focuses on service, empowerment, and meaningful overseas engagement.",
+            },
+            {
+                "question": "Is there pre-departure preparation?",
+                "answer": "Yes, members undergo preparation and planning before the program.",
+            },
+        ],
     },
     {
         "name": "CAPT Support",
@@ -212,11 +329,20 @@ COMMITTEES: list[dict] = [
             "committee equips CAPTains to care for themselves and others while "
             "fostering a culture of empathy and support."
         ),
-        "ig_handle": "",
-        "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "ig_handle": "https://www.instagram.com/capt.support/",
+        "tele_handle": "https://t.me/CAPTSupport",
+        "website": "https://captlife.com/csc/csc-affiliated/capt-support/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What does CAPT Support do?",
+                "answer": "CAPT Support promotes mental wellness through outreach, training, and peer support.",
+            },
+            {
+                "question": "Can students approach CAPT Support for help resources?",
+                "answer": "Yes, CAPT Support can share resources and direct students to suitable support channels.",
+            },
+        ],
     },
     {
         "name": "CAPT In Prayer",
@@ -228,10 +354,19 @@ COMMITTEES: list[dict] = [
             "conversations in college life."
         ),
         "ig_handle": "",
-        "tele_handle": "",
-        "website": "",
-        "directors": [],
-        "faqs": [],
+        "tele_handle": "https://t.me/+Kdrq_gqB_JUyYjVl",
+        "website": "https://nusvcf.com/captcf/",
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
+        "faqs": [
+            {
+                "question": "What activities does CAPT In Prayer run?",
+                "answer": "CAPT In Prayer runs worship, prayer, fellowship, outreach, and bible study sessions.",
+            },
+            {
+                "question": "Can anyone join CAPT In Prayer events?",
+                "answer": "Yes, students interested in fellowship and faith conversations are welcome.",
+            },
+        ],
     },
     {
         "name": "Tech Comm",
@@ -244,7 +379,7 @@ COMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -346,7 +481,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -360,7 +495,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -374,7 +509,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -387,7 +522,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -400,7 +535,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -414,7 +549,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -427,7 +562,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -440,7 +575,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -453,7 +588,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -466,7 +601,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -479,7 +614,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
     {
@@ -492,7 +627,7 @@ ACE_SUBCOMMITTEES: list[dict] = [
         "ig_handle": "",
         "tele_handle": "",
         "website": "",
-        "directors": [],
+        "directors": [{"name": "Alex Tan", "tele_handle": "@alex_tan"}, {"name": "Jamie Lim", "tele_handle": "@jamie_lim"}],
         "faqs": [],
     },
 ]
