@@ -7,7 +7,6 @@ and ask anonymous questions to committee directors.
 Environment variables (set in .env or the host environment):
   BOT_TOKEN       - Telegram Bot API token (required)
   ADMIN_CHAT_ID   - Telegram chat ID for the admin / directors group (required)
-  OPENAI_API_KEY  - OpenAI API key for the AI chatbot feature (optional)
 
 Run:
   python bot.py
@@ -67,7 +66,6 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 BOT_TOKEN: str = os.environ["BOT_TOKEN"]
 ADMIN_CHAT_ID: str = os.environ["ADMIN_CHAT_ID"]
-OPENAI_API_KEY: Optional[str] = os.environ.get("OPENAI_API_KEY")
 
 # ---------------------------------------------------------------------------
 # Conversation states
@@ -100,16 +98,14 @@ WELCOME_TEXT = (
     "<b>College of Alice &amp; Peter Tan (CAPT)</b>, NUS.\n\n"
     "🔍 <b>What would you like to do?</b>\n"
     "• Browse a committee to read its overview, resources and FAQs\n"
-    "• Ask an anonymous question to a committee's directors\n"
-    "• Chat with the AI assistant for quick answers\n\n"
+    "• Ask an anonymous question to a committee's directors\n\n"
     "👇 <b>Select a committee below to get started:</b>"
 )
 
 HELP_TEXT = (
     "ℹ️ <b>CAPT-pedia Help</b>\n\n"
     "/start — Show the committee menu\n"
-    "/help  — Show this help message\n"
-    "/ask   — Ask the AI assistant a question\n\n"
+    "/help  — Show this help message\n\n"
     "<i>Tip: You can also tap</i> <b>Ask a Question</b> <i>inside any committee "
     "to send an anonymous message to its directors.</i>"
 )
@@ -579,73 +575,6 @@ async def reply_to_question(
         )
 
 
-# --- AI chatbot ---
-
-async def ai_chat_command(
-    update: Update, context: ContextTypes.DEFAULT_TYPE
-) -> None:
-    """
-    /ask <question> — Answer the question using the AI assistant.
-    Falls back to a helpful message if OpenAI is not configured.
-    """
-    if not context.args:
-        await update.message.reply_text(
-            "Usage: <code>/ask &lt;your question&gt;</code>\n\nExample: <code>/ask What does SportsCom do?</code>",
-            parse_mode=ParseMode.HTML,
-        )
-        return
-
-    question = " ".join(context.args)
-    await _handle_ai_question(update, question)
-
-
-async def _handle_ai_question(update: Update, question: str) -> None:
-    """Send an AI-generated answer for the given question."""
-    if not OPENAI_API_KEY:
-        await update.message.reply_text(
-            "🤖 The AI assistant is not configured yet.\n\n"
-            "Please use /start to browse committees and FAQs, or use "
-            "<b>Ask a Question</b> inside a committee to reach the directors directly.",
-            parse_mode=ParseMode.HTML,
-        )
-        return
-
-    try:
-        import openai  # pylint: disable=import-outside-toplevel
-
-        client = openai.OpenAI(api_key=OPENAI_API_KEY)
-
-        # Build a context string from committee data for the AI
-        context_lines = ["You are a helpful assistant for CAPT (College of Alice & Peter Tan) at NUS Singapore."]
-        context_lines.append("Here is information about CAPT's committees:\n")
-        for comm in COMMITTEES:
-            context_lines.append(f"- {comm['name']}: {comm['overview']}")
-        context_lines.append(
-            "\nAnswer the user's question helpfully and concisely. "
-            "If you don't know the answer, suggest they use the bot's "
-            "'Ask a Question' feature to contact the committee directly."
-        )
-        system_prompt = "\n".join(context_lines)
-
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": question},
-            ],
-            max_tokens=500,
-        )
-        answer = response.choices[0].message.content.strip()
-        await update.message.reply_text(
-            f"🤖 <b>AI Assistant</b>\n\n{html.escape(answer)}", parse_mode=ParseMode.HTML
-        )
-    except Exception as exc:
-        logger.error("OpenAI API error: %s", exc)
-        await update.message.reply_text(
-            "⚠️ The AI assistant encountered an error. Please try again later."
-        )
-
-
 # ---------------------------------------------------------------------------
 # Application setup
 # ---------------------------------------------------------------------------
@@ -695,7 +624,6 @@ def main() -> None:
     application.add_handler(conv_handler)
     application.add_handler(CommandHandler("help", help_command))
     application.add_handler(CommandHandler("reply", reply_to_question))
-    application.add_handler(CommandHandler("ask", ai_chat_command))
 
     logger.info("CAPT-pedia bot is running...")
     application.run_polling(allowed_updates=Update.ALL_TYPES)

@@ -1,6 +1,6 @@
 # CAPT-pedia
 
-A Telegram bot that helps NUS CAPT (College of Alice & Peter Tan) freshmen discover committees, browse FAQs, ask anonymous questions to directors, and chat with an AI assistant.
+A Telegram bot that helps NUS CAPT (College of Alice & Peter Tan) freshmen discover committees, browse FAQs, and ask anonymous questions to directors.
 
 ---
 
@@ -15,72 +15,108 @@ A Telegram bot that helps NUS CAPT (College of Alice & Peter Tan) freshmen disco
 | 💬 Admin Replies | Directors reply to anonymous questions using `/reply` and the bot delivers the response |
 | 🌐 Directors Portal | Web dashboard for directors to view pending questions and reply from one place |
 | 🔐 NUS Email 2-Step Login | Portal sign-in via NUS email + one-time verification code |
-| 🤖 AI Chatbot | Ask the AI assistant (powered by OpenAI) any CAPT-related question using `/ask` |
 
 ---
 
-## Quick Start
+## Judge Guide: Local Setup and Usage
+
+Use this section to run the full hackathon demo locally (Telegram bot + directors portal).
 
 ### 1. Prerequisites
 
 - Python 3.10+
-- A Telegram Bot token — create one via [@BotFather](https://t.me/BotFather)
-- The Telegram **chat ID** of the admin/directors group where anonymous questions will be forwarded
-- *(Optional)* An OpenAI API key for the AI chatbot feature
+- A Telegram account
+- A Telegram Bot token from [@BotFather](https://t.me/BotFather)
+- The Telegram **chat ID** of the admin/directors group that receives anonymous questions
+- SMTP credentials for OTP email login in the portal
+- *(Optional)* Node.js 18+ only if you want to rebuild frontend assets
 
-### 2. Clone & Install
+### 2. Clone and set up Python environment
 
 ```bash
 git clone https://github.com/jingdaong/CAPT-pedia.git
 cd CAPT-pedia
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Configure
-
-Copy the example environment file and fill in your values:
+### 3. Configure environment
 
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env`:
+Set at least these values in `.env`:
 
 ```dotenv
-# Required
 BOT_TOKEN=your_telegram_bot_token_here
 ADMIN_CHAT_ID=your_admin_group_chat_id_here
-JWT_SECRET=your_random_jwt_secret
+JWT_SECRET=your_random_secret
 
-# Directors Portal email OTP auth (required for portal)
 SMTP_HOST=smtp.example.com
 SMTP_PORT=587
 SMTP_USERNAME=your_smtp_username
 SMTP_PASSWORD=your_smtp_password
-SMTP_FROM=no-reply@u.nus.edu
+SMTP_FROM=your_sender_email
 
-# Optional for portal auth behavior
-ALLOWED_EMAIL_DOMAINS=u.nus.edu
-OTP_LENGTH=6
-OTP_TTL_MINUTES=10
-OTP_RESEND_COOLDOWN_SECONDS=60
-OTP_MAX_ATTEMPTS=5
 SECURE_COOKIES=false
+ALLOWED_EMAIL_DOMAINS=u.nus.edu
+```
 
-# Optional – enables the /ask AI chatbot feature
-OPENAI_API_KEY=your_openai_api_key_here
+For local judging with non-NUS email, set `ALLOWED_EMAIL_DOMAINS` to your email domain (for example `gmail.com`).
+
+Generate a JWT secret quickly with:
+
+```bash
+python -c "import secrets; print(secrets.token_hex(32))"
 ```
 
 > **Tip:** To find a group's chat ID, add [@userinfobot](https://t.me/userinfobot) to the group and send any message.
 
-### 4. Run
+### 4. Run locally (2 terminals)
+
+Terminal A (Directors Portal backend + web UI):
 
 ```bash
-# Telegram bot
-python bot.py
-
-# Directors portal (separate terminal)
+source .venv/bin/activate
 python server.py
+```
+
+Terminal B (Telegram bot):
+
+```bash
+source .venv/bin/activate
+python bot.py
+```
+
+Portal URL: `http://localhost:8000`
+
+### Important data note for judges
+
+This project uses a local SQLite database file (`DB_PATH`, default: `capt_pedia.db`).
+
+- Data is machine-local by default.
+- If `bot.py` and `server.py` run on different machines, questions will not sync automatically.
+- For judging, run both services on the same machine (recommended), or ensure both point to the same shared database.
+
+### 5. Judge demo flow
+
+1. Open Telegram, message your bot, and run `/start`.
+2. Select a committee and submit an anonymous question.
+3. Open `http://localhost:8000`, sign in with email OTP, and view pending questions.
+4. Reply to the pending question from the portal.
+5. Confirm the original Telegram user receives the reply message.
+
+### 6. Optional: rebuild the portal frontend
+
+Only needed if frontend source files are changed.
+
+```bash
+cd frontend
+npm install
+npm run build
+cd ..
 ```
 
 ---
@@ -91,7 +127,6 @@ python server.py
 |---------|-----|-------------|
 | `/start` | Anyone | Show the welcome message and committee list |
 | `/help` | Anyone | Show available commands |
-| `/ask <question>` | Anyone | Ask the AI assistant a CAPT-related question |
 | `/cancel` | Anyone | Cancel the current action and return to the menu |
 | `/reply <ID> <text>` | Admins only | Reply to an anonymous question by its ID |
 
@@ -168,7 +203,6 @@ CAPT-pedia/
 |---------|---------|
 | `python-telegram-bot==20.7` | Telegram Bot API wrapper |
 | `python-dotenv==1.0.1` | Load `.env` configuration |
-| `openai==1.12.0` | AI chatbot (optional) |
 | `fastapi==0.111.0` | Directors portal backend APIs |
 | `uvicorn[standard]==0.29.0` | ASGI server for portal backend |
 | `sqlalchemy==2.0.30` | Persistent storage for questions and OTP codes |

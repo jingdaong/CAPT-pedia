@@ -438,6 +438,7 @@ def api_committees(director: Annotated[Director, Depends(get_current_director)])
 # ---------------------------------------------------------------------------
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/assets", StaticFiles(directory="static/assets"), name="assets")
 
 
 @app.get("/{full_path:path}", include_in_schema=False)
