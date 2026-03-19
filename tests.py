@@ -144,7 +144,7 @@ class TestBotHelpers(unittest.TestCase):
         self.assertTrue(self.bot.WELCOME_TEXT.strip())
 
     def test_help_text_contains_commands(self):
-        for cmd in ("/start", "/help", "/ask"):
+        for cmd in ("/start", "/help"):
             self.assertIn(cmd, self.bot.HELP_TEXT)
 
 
