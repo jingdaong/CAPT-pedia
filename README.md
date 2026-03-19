@@ -208,3 +208,36 @@ CAPT-pedia/
 | `sqlalchemy==2.0.30` | Persistent storage for questions and OTP codes |
 | `httpx==0.27.0` | Outbound HTTP calls (Telegram API from portal) |
 | `python-jose[cryptography]==3.3.0` | JWT session signing and verification |
+
+---
+
+## Tech Stack Diagram
+
+```mermaid
+flowchart TD
+    U[Telegram User] -->|asks anonymous questions| B[Telegram Bot\nPython + python-telegram-bot]
+    D[Director / Judge] -->|opens portal| F[Portal UI\nReact + React Router + Vite]
+
+    F -->|API requests| S[Backend Server\nFastAPI + Uvicorn]
+    S -->|reads/writes| DB[(SQLite\nvia SQLAlchemy)]
+    B -->|reads/writes| DB
+
+    S -->|send OTP email| SMTP[SMTP Email Service]
+    S -->|sign/verify sessions| JWT[JWT Auth\npython-jose]
+    S -->|send reply message| TG[Telegram Bot API]
+    B -->|polls and sends messages| TG
+
+    V[Frontend Source\nReact + Vite project] -->|build output| ST[static/ bundled assets]
+    ST -->|served by FastAPI| F
+```
+
+### Stack at a glance
+
+- Frontend: React, React Router, Vite
+- Backend API: FastAPI, Uvicorn
+- Bot runtime: python-telegram-bot
+- Database: SQLite with SQLAlchemy ORM
+- Authentication: JWT with python-jose
+- Email login: SMTP-based OTP
+- Config: `.env` via python-dotenv
+- External integrations: Telegram Bot API

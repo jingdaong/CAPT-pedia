@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CAPT Committee Q&A Portal — My Questions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="portal">
+  <div class="layout container">
+    <aside class="sidebar" aria-label="Navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-avatar" aria-hidden="true">S</div>
+        <div>
+          <h3>Hi, Sarah!</h3>
+          <p class="small">Comm Director</p>
+        </div>
+      </div>
+      <ul class="sidebar-nav" role="menu">
+        <li><a href="dashboard.html" role="menuitem"><span class="icon">🏠</span> Dashboard</a></li>
+        <li><a href="my-questions.html" class="active" role="menuitem"><span class="icon">💬</span> My Questions</a></li>
+        <li><a href="settings.html" role="menuitem"><span class="icon">⚙️</span> Settings</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="small">Logged in as <strong>sarah.tan@capt.sg</strong></div>
+      </div>
+    </aside>
+
+    <main class="portal-main" role="main">
+      <div class="header-row">
+        <div>
+          <h1>My Questions</h1>
+          <p>Review and manage questions you've answered from Telebot users.</p>
+        </div>
+        <div class="header-icons" aria-label="Search">
+          <button class="icon-button" title="Search" aria-label="Search">🔍</button>
+        </div>
+      </div>
+
+      <div class="card" style="overflow: hidden;">
+        <table class="questions-table" aria-label="List of questions">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Date Received</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>How much time commitment is expected?</td>
+              <td>Apr 23, 2024</td>
+              <td><span class="badge badge-answer">Answered</span></td>
+            </tr>
+            <tr>
+              <td>What skills can I learn from joining?</td>
+              <td>Apr 22, 2024</td>
+              <td><span class="badge badge-answer">Answered</span></td>
+            </tr>
+            <tr>
+              <td>What events does your comm organize?</td>
+              <td>Apr 21, 2024</td>
+              <td><a href="dashboard.html" class="btn btn-primary" style="padding: 0.4rem 0.9rem;">Reply</a></td>
+            </tr>
+            <tr>
+              <td>When are your recruitment periods?</td>
+              <td>Apr 21, 2024</td>
+              <td><span class="badge badge-answer">Answered</span></td>
+            </tr>
+            <tr>
+              <td>How many members are in the committee?</td>
+              <td>Apr 20, 2024</td>
+              <td><span class="badge badge-answer">Answered</span></td>
+            </tr>
+            <tr>
+              <td>Do I need prior experience to join?</td>
+              <td>Apr 19, 2024</td>
+              <td><span class="badge badge-answer">Answered</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination" aria-label="Pagination">
+          <span>Previous</span>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">Next</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
