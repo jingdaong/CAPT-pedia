@@ -110,7 +110,7 @@ This project uses a local SQLite database file (`DB_PATH`, default: `capt_pedia.
 
 ### 6. Optional: rebuild the portal frontend
 
-Only needed if frontend source files are changed.
+Only needed if frontend source files in `frontend/` are changed. The build output is written to `static/`, which `server.py` serves.
 
 ```bash
 cd frontend
@@ -181,17 +181,40 @@ python -m pytest tests.py -v
 
 ```
 CAPT-pedia/
-├── bot.py              # Main bot logic and conversation handlers
-├── server.py           # FastAPI backend for directors portal
-├── database.py         # SQLAlchemy models/shared DB helpers
-├── static/
-│   └── index.html      # Directors portal frontend
+├── bot.py                        # Main bot logic and conversation handlers
+├── server.py                     # FastAPI backend for the directors portal + SPA serving
+├── database.py                   # SQLAlchemy models and shared DB helpers
 ├── data/
 │   ├── __init__.py
-│   └── committees.py   # Committee data (overview, FAQs, resources)
-├── tests.py            # Unit tests
-├── requirements.txt    # Python dependencies
-├── .env.example        # Environment variable template
+│   └── committees.py             # Committee data (overview, FAQs, resources)
+├── frontend/                     # React + Vite portal source
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   └── src/
+│       ├── App.jsx
+│       ├── api.js
+│       ├── auth.js
+│       ├── index.css
+│       ├── main.jsx
+│       ├── components/
+│       │   ├── Layout.jsx
+│       │   ├── ReplyModal.jsx
+│       │   ├── Sidebar.jsx
+│       │   └── Spinner.jsx
+│       └── pages/
+│           ├── Dashboard.jsx
+│           ├── Login.jsx
+│           └── Questions.jsx
+├── static/                       # Built portal assets served by FastAPI
+│   ├── index.html
+│   └── assets/
+│       ├── index-*.js
+│       └── index-*.css
+├── tests.py                      # Unit tests
+├── requirements.txt              # Python dependencies
+├── .env.example                  # Environment variable template
 └── README.md
 ```
 
